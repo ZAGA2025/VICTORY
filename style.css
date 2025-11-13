@@ -1,0 +1,260 @@
+/* style.css */
+
+/* Variables de couleur */
+:root {
+    --color-dark-blue: #003366; /* Bleu très foncé pour le fond */
+    --color-medium-blue: #0056B3; /* Bleu moyen pour les barres de navigation */
+    --color-light-blue: #007bff; /* Bleu clair standard */
+    --color-turquoise: #4DD0E1; /* Turquoise pour les accents */
+    --color-white: #ffffff;
+    --color-light-gray: #f4f4f4;
+    --color-text: #333;
+}
+
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-gray);
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* En-tête (Header) */
+header {
+    background-color: var(--color-white);
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-dark-blue);
+    text-decoration: none;
+}
+
+/* Barre de recherche (Formulaire Google) */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 400px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding-left: 10px;
+}
+
+/* Icônes de connexion/panier */
+.user-actions a {
+    color: var(--color-dark-blue);
+    margin-left: 20px;
+    font-size: 1em; 
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px; 
+    border-radius: 5px;
+}
+
+.user-actions svg, .user-actions i {
+    font-size: 1.5em; 
+    margin-right: 5px;
+}
+
+/* Style spécifique pour le bouton Gmail */
+.user-actions a[title*="Gmail"] {
+    color: var(--color-white);
+    background-color: #DD4B39; /* Couleur Google/Gmail */
+    border: 1px solid #DD4B39;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.user-actions a[title*="Gmail"]:hover {
+    background-color: #C33D27;
+}
+
+/* Navigation principale */
+nav {
+    background-color: var(--color-medium-blue);
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: var(--color-dark-blue);
+}
+
+/* Barre de catégories (comme dans l'image) */
+.category-bar {
+    background-color: var(--color-dark-blue); 
+    padding: 0;
+}
+
+.category-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.category-bar li {
+    background-color: var(--color-medium-blue); 
+    margin-right: 1px; 
+}
+
+.category-bar a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+/* Styles pour les catégories spécifiques pour correspondre au dégradé */
+.category-bar li:nth-child(2) {
+    background-color: var(--color-turquoise); 
+}
+.category-bar li:nth-child(3) {
+    background-color: #79D6E1; 
+}
+.category-bar li:nth-child(4) {
+    background-color: #92E3EB; 
+}
+
+/* Section "Qui sommes-nous" (Héro) */
+.hero-section {
+    background-color: var(--color-white);
+    padding: 40px 0 0 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-text {
+    flex: 2;
+    padding-right: 50px;
+}
+
+.hero-text h1 {
+    color: var(--color-medium-blue);
+    font-size: 2.5em;
+    margin-top: 0;
+    border-bottom: 3px solid var(--color-turquoise);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 250px; 
+    margin-right: -15px; 
+}
+
+/* Vagues CSS */
+.waves-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: none;
+    transform: rotate(180deg); 
+}
+
+.wave-1 {
+    top: 50px;
+    opacity: 0.9;
+    background: linear-gradient(90deg, transparent, rgba(0, 51, 102, 0.2) 20%, rgba(0, 51, 102, 0.4) 50%, rgba(0, 51, 102, 0.1) 80%, transparent);
+    animation: wave-animation 10s linear infinite;
+}
+
+.wave-2 {
+    top: 100px;
+    opacity: 0.7;
+    background: linear-gradient(90deg, transparent, rgba(0, 86, 179, 0.3) 20%, rgba(0, 86, 179, 0.5) 50%, rgba(0, 86, 179, 0.2) 80%, transparent);
+    animation: wave-animation 15s linear infinite reverse;
+}
+
+.wave-3 {
+    top: 150px;
+    opacity: 0.5;
+    background: linear-gradient(90deg, transparent, rgba(77, 208, 225, 0.4) 20%, rgba(77, 208, 225, 0.6) 50%, rgba(77, 208, 225, 0.3) 80%, transparent);
+    animation: wave-animation 8s linear infinite;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(180deg);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0) rotate(180deg);
+    }
+}
