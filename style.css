@@ -91,7 +91,7 @@ header {
 
 /* Style spécifique pour le bouton Gmail */
 .user-actions a[title*="Gmail"] {
-    color: var(--color-white);
+    color: var(--color-bleu);
     background-color: #DD4B39; /* Couleur Google/Gmail */
     border: 1px solid #DD4B39;
     font-size: 0.9em;
@@ -166,7 +166,7 @@ nav {
     background-color: #92E3EB; 
 }
 
-/* Section "Qui sommes-nous" (Héro) */
+/* Section "Bienvenu" (Héro) */
 .hero-section {
     background-color: var(--color-white);
     padding: 40px 0 0 0;
