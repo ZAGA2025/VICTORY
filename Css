@@ -1,0 +1,161 @@
+/* Variables pour les couleurs clés */
+:root {
+    --color-primary-blue: #007bff; /* Un bleu vif */
+    --color-dark-blue: #005691; /* Le bleu très foncé du footer */
+    --color-teal: #4db3b3; /* Le bleu-vert des onglets */
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.page-container {
+    width: 1000px; /* Largeur fixe pour correspondre à l'aperçu */
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Supérieure */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-primary-blue);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    width: 250px;
+}
+
+.search-icon {
+    color: #888;
+    cursor: pointer;
+}
+
+.user-info span {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Barre de Navigation Principale */
+.main-nav {
+    background-color: var(--color-dark-blue);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 0 0 20px; /* Retrait à gauche */
+}
+
+.nav-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-item.active {
+    background-color: #004070; /* Bleu plus foncé pour l'élément actif */
+}
+
+/* Onglets de Catégories */
+.category-tabs {
+    display: flex;
+    background-color: #f0f0f0; /* Légèrement gris */
+    padding-left: 20px;
+}
+
+.tab {
+    padding: 8px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    color: #555;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: var(--color-dark-blue); /* Le bleu foncé de l'image */
+    color: white;
+}
+
+/* Simuler les onglets 3 et 4 avec la couleur bleu-vert */
+.category-tabs button:nth-child(3),
+.category-tabs button:nth-child(4) {
+    background-color: var(--color-teal);
+    color: white;
+}
+
+/* Bloc Bienvenue / Équipe */
+.content-wrapper {
+    padding: 0 20px;
+}
+
+.info-block {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 1px; /* Pour coller aux onglets */
+}
+
+.text-area {
+    flex: 1;
+    padding-right: 30px;
+    color: #333;
+}
+
+.text-area h1 {
+    font-size: 28px;
+    color: var(--color-dark-blue);
+    margin-top: 0;
+}
+
+.image-area {
+    width: 50%;
+    /* Couleurs pour simuler l'arrière-plan de l'image de l'équipe */
+    background: linear-gradient(to right, #a0e6e6, #50c2c2);
+    /* En production, vous mettriez ici l'image de l'équipe */
+    min-height: 250px;
+}
+
+/* Simulation des Vagues */
+.wave-simulation {
+    height: 300px; /* Grande hauteur pour les vagues */
+    /* Simulation du dégradé de couleur bleu foncé */
+    background: linear-gradient(to top, var(--color-dark-blue), #80cfff); 
+    /* Ceci ne créera pas les formes exactes de vagues, juste une zone de couleur */
+}
+
+/* Footer très foncé */
+.bottom-bar {
+    background-color: var(--color-dark-blue);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+}
